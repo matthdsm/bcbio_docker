@@ -10,14 +10,14 @@ jobs:
   include:
     - stage: base
       name: "bcbio-base"
-      script: sudo -E bash build_base.sh
+      script: travis_wait 20 sudo -E bash build_base.sh
     - stage: tools
       name: "bcbio-vc"
-      script: sudo -E bash build_tool.sh
+      script: travis_wait 20 sudo -E bash build_tool.sh
       env: TOOL="bcbio-vc"
     - stage: tools
       name: "bcbio-rnaseq"
-      script: sudo -E bash build_tool.sh
+      script: travis_wait 20 sudo -E bash build_tool.sh
       env: TOOL="bcbio-rnaseq"
 env:
   global:
