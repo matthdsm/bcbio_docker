@@ -13,7 +13,7 @@ jobs:
       script: travis_wait 20 sudo -E bash build_base.sh
     - stage: tools
       name: "bcbio-vc"
-      script: travis_wait 40 sudo -E bash build_tool.sh
+      script: travis_wait 80 sudo -E bash build_tool.sh
       env: TOOL="bcbio-vc"
     - stage: tools
       name: "bcbio-rnaseq"
